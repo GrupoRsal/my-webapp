@@ -21,4 +21,26 @@
     </form>
   </div>
 </body>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Obter valores dos campos
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Enviar dados para o servidor (simulado)
+      // Aqui você deve fazer uma requisição AJAX para o seu backend
+      // Por exemplo, usando fetch() ou XMLHttpRequest
+      // Aqui está um exemplo simulado
+      if (username === "user" && password === "password") {
+          alert("Login bem-sucedido!");
+          // Redirecionar para outra página ou executar outras ações após o login
+      } else {
+          alert("Nome de usuário/senha incorretos. Tente novamente.");
+      }
+  });
+</script>
+
 </html>
