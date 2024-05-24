@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Webapp</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Arquivo CSS para estilização -->
 </head>
 <body>
-  <h1>Bem vindo ao site exclusivo para fãs de Sonic</h1>
-  <p id="message"></p>
-  <script>
-    fetch('/api')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('message').textContent = data.message;
-      });
-  </script>
+  <div class="container">
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
 </body>
 </html>
